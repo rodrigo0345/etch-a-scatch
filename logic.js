@@ -1,20 +1,28 @@
+/* inicio */
 let cubes;
+const table = document.querySelector(".table");
+const userOption = document.querySelector(".config > .gridSize");
+main();
 
-function changeCubeState(e)
+function createBlock(e, cube)
 {
     cubes = document.querySelectorAll(".cube");
-
+    console.log(e);
     if(e == undefined) return;
 
-    if( this.classList.contains("clicked") )
-    {
-        this.style.backgroundColor = "red";
-        this.classList.remove("clicked");
-        return;
-    }
+    console.log(e.button);
     
-    this.style.backgroundColor = "blue";
-    this.classList.add("clicked");
+    if(e.altKey == true)
+    {
+        cube.style.backgroundColor = "black";
+        cube.classList.add("clicked");
+    }
+    else if(e.ctrlKey == true)
+    {
+        cube.style.backgroundColor = "white";
+        cube.classList.remove("clicked");
+        return;
+    }  
 }
 
 function generateGrid(table, userOption)
@@ -37,25 +45,23 @@ function generateGrid(table, userOption)
     }
 }
 
+
 function main()
 {
     /* tabela inicial */
     generateGrid(table, userOption.value);
-    cubes = document.querySelectorAll(".cube");
 
+    /* selecionar cubos */
+    cubes = document.querySelectorAll(".cube");
     cubes.forEach( (cube) => {
-        cube.addEventListener("mouseenter", changeCubeState);
+        cube.addEventListener("pointermove", e => 
+            {
+                createBlock(e, cube);
+            }
+        )
     });
 }
-
-const table = document.querySelector(".table");
-const userOption = document.querySelector(".config > .gridSize");
-
-main();
 
 userOption.addEventListener("change", () => {
     main();
 });
-
-
-
