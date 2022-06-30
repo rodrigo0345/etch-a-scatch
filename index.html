@@ -6,16 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="logic.js" defer></script>
     <link rel="shortcut icon" href="dependicies/father.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
     <title>Etch a catch</title>
 </head>
 <body>
-    <section class="table"></section>
+    <header>
+        <h1>Etch a catch</h1>
+        <p>
+            <a href="https://github.com/rodrigo0345/etch-a-catch" target="_blank" rel="external">Github page</a>
+        </p>
+    </header>
+    <div class="container">
+        <section class="table">
+        </section>
+    </div>
 
     <!-- allow the user to change the grid size -->
-    <select name="gridSize" id="gridSize">
-        <option value="16">16</option>
-        <option value="32">32</option>
-        <option value="64">64</option>
-    </select>
+    <section class="config">
+            <p>Grid size: </p>
+            <select name="gridSize" id="gridSize">
+                <option value="16">16</option>
+                <option value="32">32</option>
+                <option value="64">64</option>
+            </select>
+    </section>
 </body>
 </html>
