@@ -41,14 +41,6 @@ header > p > a{
     border-color: black;
 
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-.cube{
-    margin: auto;
-    background-color: blue;
-    display: inline-grid;
-    column-gap: 1px;
-    row-gap: 1px;
 }
 
 .config{
