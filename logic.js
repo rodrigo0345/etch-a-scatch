@@ -4,6 +4,7 @@ let table;
 let userGridSize;
 let userDrawMode;
 let userColor;
+let userTouch = false;
 
 /* functions */
 function updateGridSize()
@@ -31,13 +32,14 @@ function updateGridSize()
         cubes = document.querySelectorAll(".cube");
         
         if(e == undefined) return;
-        
+        e.preventDefault();
+
         console.log(userDrawMode.value);
-        if(e.altKey == true && userDrawMode.value == 'pencil')
+        if(userTouch == true && userDrawMode.value == 'pencil')
         {
             cube.style.backgroundColor = userColor.value;
         }
-        else if(e.altKey == true && userDrawMode.value == 'rubber')
+        else if(userTouch == true && userDrawMode.value == 'rubber')
         {
             cube.style.backgroundColor = "white";
             return;
@@ -69,6 +71,12 @@ function updateGridSize()
     updateGridSize();
     userGridSize.addEventListener("change", () => {
         updateGridSize();
+    });
+    window.addEventListener("pointerdown", () =>{
+        userTouch = true;
+    });
+    window.addEventListener("pointerup", () =>{
+        userTouch = false;
     });
 })();
 
