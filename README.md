@@ -1,3 +1,3 @@
 
 # etch-a-catch
-<p>Trabalho do The Odin Project.</p>
+<p>Simple pixel art maker</p>
