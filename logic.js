@@ -26,6 +26,23 @@ function updateGridSize()
             table.append(newDiv);
         }
     }
+    function paintBlock(e, cube)
+    {
+        cubes = document.querySelectorAll(".cube");
+        
+        if(e == undefined) return;
+        
+        console.log(userDrawMode.value);
+        if(e.altKey == true && userDrawMode.value == 'pencil')
+        {
+            cube.style.backgroundColor = userColor.value;
+        }
+        else if(e.altKey == true && userDrawMode.value == 'rubber')
+        {
+            cube.style.backgroundColor = "white";
+            return;
+        }  
+    }
 
     generateGrid(table, userGridSize.value);
 
@@ -34,15 +51,10 @@ function updateGridSize()
     cubes.forEach( (cube) => {
         cube.addEventListener("pointermove", e => 
             {
-                createBlock(e, cube);
+                paintBlock(e, cube);
             }
         )
     });
-}
-
-function updateColor()
-{
-
 }
 
 (() => {
@@ -58,29 +70,11 @@ function updateColor()
     userGridSize.addEventListener("change", () => {
         updateGridSize();
     });
-    
 })();
 
 
 
-function createBlock(e, cube)
-{
-    cubes = document.querySelectorAll(".cube");
-    console.log(e);
-    if(e == undefined) return;
 
-    console.log(e.button);
-    
-    if(e.altKey == true)
-    {
-        cube.style.backgroundColor = userColor.value;
-    }
-    else if(e.ctrlKey == true)
-    {
-        cube.style.backgroundColor = "white";
-        return;
-    }  
-}
 
 
 
