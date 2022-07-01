@@ -11,25 +11,62 @@
 </head>
 <body>
     <header>
-        <h1>Etch a catch</h1>
-        <p>
-            <a href="https://github.com/rodrigo0345/etch-a-catch" target="_blank" rel="external">Github page</a>
-        </p>
+        <div>
+            <div id="header-image"></div>
+            <h1>Etch a catch</h1>
+        </div>
+        <div>
+            <a href="https://github.com/rodrigo0345/etch-a-catch" target="_blank" rel="external">
+                <abbr title="Project page"><div id="header-git-image"></div></abbr>
+            </a>
+        </div>
     </header>
-    <div class="container">
-        <section class="table">
-            
-        </section>
-    </div>
+    <section>
+        <div class ="text">
+            <div>
+                <h1>Welcome to Etch a catch!</h1>
+                <p>Be able to create whatever you want with a simple design</p>
+            </div>
+            <span>
 
-    <!-- allow the user to change the grid size -->
-    <section class="config">
-            <p>Grid size: </p>
-            <select name="gridSize" class="gridSize">
-                <option value="16">16</option>
-                <option value="32">32</option>
-                <option value="64">64</option>
-            </select>
+            </span>
+        </div>
+        <div class="drawBoard">
+            <h1>Draw tools</h1>
+            <div>
+                <div class="container" oncontextmenu="return false;">
+                    <section class="table">
+                    </section>
+                </div>
+                <!-- allow the user to change the grid size -->
+                <section class="config">
+                        <div>
+                            <p>Grid size: </p>
+                            <select name="gridSize" class="gridSize">
+                                <option value="16">16 x 16</option>
+                                <option value="32">32 x 32</option>
+                                <option value="64">64 x 64</option>
+                            </select>
+                        </div>
+                        <hr>
+                        <div id="colorDiv">
+                            <p>Color:</p>
+                            <input type="color" class="colorSelected">
+                        </div>
+                        <hr>
+                        <div id="drawDiv">
+                            <p>Draw mode:</p>
+                            <select name="drawMode" class="drawMode">
+                                <option value="pencil">Pencil</option>
+                                <option value="rubber">Rubber</option>
+                            </select>
+                        </div>
+                </section>
+                        </div>
+            </div>
     </section>
+    <footer>
+        <p>Criado por <a href="https://github.com/rodrigo0345" target="_blank" rel="external">Rodrigo Casanova</a></p>
+    </footer>
 </body>
 </html>
