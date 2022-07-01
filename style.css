@@ -173,10 +173,6 @@ body > section .drawBoard .table{
     display: grid;
 }
 
-.clicked{
-    background-color: yellow;
-}
-
 footer{
     height: 40px;
     text-align: center;
