@@ -1,7 +1,7 @@
 /* inicio */
 let cubes;
 const table = document.querySelector(".table");
-const userOption = document.querySelector(".config > .gridSize");
+const userOption = document.querySelector(".config .gridSize");
 main();
 
 function createBlock(e, cube)
@@ -39,7 +39,6 @@ function generateGrid(table, userOption)
         //newDiv.style.width = 100 / userOption;
         //newDiv.style.height = 100 / userOption;
         newDiv.style.rowGap = 1;
-        //newDiv.style.backgroundColor = "blue";
 
         table.append(newDiv);
     }

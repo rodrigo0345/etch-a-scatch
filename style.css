@@ -1,3 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --color-almost-black: #010326;
+    --color-almost-white: #F2F2F2;
+    --color-darkblue: #010B40;
+    --color-skyblue: #94C6F2;
+    --color-creme: #F2EEAC;
+
+    --font-main: 'Passion One', cursive;
+    --font-secundary: 'Roboto Slab', serif;
+    
+    --imagem-github: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F9%2F91%2FOcticons-mark-github.svg%2F375px-Octicons-mark-github.svg.png&f=1&nofb=1);
+    --imagem-pixelArt: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi0.wp.com%2Fwww.aesdes.org%2Fwp-content%2Fuploads%2F2016%2F01%2Feboy_sf.png%3Fresize%3D1500%2C1062&f=1&nofb=1);
+    --imagem-draw-mode-pencil: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fgame-icons.net%2Ficons%2F000000%2Ftransparent%2F1x1%2Fdelapouite%2Fpencil.png&f=1&nofb=1);
+    --imagem-draw-mode-rubber: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F6%2F65%2FHSRubber.svg%2F480px-HSRubber.svg.png&f=1&nofb=1);
+}
+
 * {
     padding: 0px;
     margin: 0px;
@@ -7,53 +25,162 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;    
+    font-family: var(--font-main);
+    background-color: var(--color-almost-white);
 }
 
 header
 {
+    border-style: double;
     flex: 1;
-    background-color: antiquewhite;
-    min-height: 90px;
-    max-height: 100px;
+    background-color: var(--color-almost-white);
+    min-height: 100px;
+    max-height: 130px;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
-header > p > a{
-    text-decoration: none;
+
+header > div{
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
-.container {
-    align-self: center;
-    height: 70%;
-    width: 100%;
+header #header-image{
+    border-radius: 50%;
+    background-color: var(--color-almost-black);
+    height: 70px;
+    width: 70px;
+}
+
+header #header-git-image{
+    border-radius: 50%;
+    background-image: var(--imagem-github);
+    background-size: cover;
+    background-position: center center;
+    height: 70px;
+    width: 70px;
+}
+
+body > section .text{
+    min-height: 500px;
+    max-height: 800px;
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    align-items: center;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.678), rgba(128, 128, 128, 0.233)), var(--imagem-pixelArt);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+body > section > .text > div{
+    background-color: var(--color-darkblue);
+    color: white;
+    min-height: 200px;
+    max-height: 400px;
+    width: 400px;
+    padding: 30px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: var(white);
+    font-size: 2em;
+} 
+body > section > .text > div > h1{
+    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.596);
+    width: 300px;
+}
+body > section > .text > div > p{
+    font-family: var(--font-secundary);
+    font-weight: 400;
+    font-size: 0.6em;
+    font-style: oblique;
+    margin-top: 10px;
+    width: 350px;
+}
+
+body > section > .drawBoard{
+    min-height: 600px;
+    max-height: 1000px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+    align-items: center;
+    background-image: linear-gradient(to top, var(--color-darkblue), var(--color-skyblue));
+}
+body > section > .drawBoard h1{
+    font-size: 2.5em;
+    color: white;
+    text-shadow: 0 2px 5px black;
+}
+
+body > section > .drawBoard > div{
+    display: flex;
+    margin-top: 30px;
+}
+
+body > section > .drawBoard > div .config{
+    background-color: var(--color-darkblue);
+    width: 10vmin;
+    border-radius: 0 10px 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: white;
+    border-style: solid;
+    border-color: white;
+    height: 70vmin;
+    min-width: 10vmin;
+    max-width: 40vmin;
+}
+body > section > .drawBoard > div .config select{
+    height:7vmin;
+    width: 7vmin;
+    font-family: var(--font-secundary);
+}
+body > section > .drawBoard > div .config .colorSelected{
+    height:7vmin;
+    width: 7vmin;
+    padding: 0px;
+    background-color: var(--color-darkblue);
+}
+body > section > .drawBoard > div .config input{
+    height:70px;
+    width: 70px;
+}
+
+body > section .drawBoard .container {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.table{
-    flex: 0 3 auto;
-    width: 50vmin;
-    height: 50vmin;
+body > section .drawBoard .table{
+    align-self: center;
+    justify-self: center;
+    flex: 1 1 auto;
+    min-height: 70vmin;
+    max-height: 400px;
+    min-width: 70vmin;
+    max-width: 400px;
+    /*width: 50vmin;*/
+    /*height: 50vmin;*/
     background-color: white;
-    border-radius: 10px;
+    border-radius: 10px 0 0 10px;
     border-style: solid;
-    border-color: black;
-
+    border-color: white;
     display: grid;
-}
-
-.config{
-    display: flex;
-    justify-content: center;
-    height: 30vmin;
-}
-.config select{
-    width: 50px;
-    height: 20px;
-    margin-left: 10px;
 }
 
 .clicked{
     background-color: yellow;
+}
+
+footer{
+    height: 40px;
+    text-align: center;
+    padding: 10px;
+    background-color: var(--color-darkblue);
+    color: white;
 }
