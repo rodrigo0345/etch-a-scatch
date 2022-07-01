@@ -34,7 +34,7 @@ function updateGridSize()
         if(e == undefined) return;
         e.preventDefault();
 
-        console.log(userDrawMode.value);
+        
         if(userTouch == true && userDrawMode.value == 'pencil')
         {
             cube.style.backgroundColor = userColor.value;
@@ -65,7 +65,7 @@ function updateGridSize()
     userColor = document.querySelector(".config .colorSelected");
     userDrawMode = document.querySelector(".config .drawMode");
 
-    console.log(userColor.value + ": " + userDrawMode.value);
+    
 
     /* tabela inicial */
     updateGridSize();
