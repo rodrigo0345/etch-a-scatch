@@ -12,8 +12,7 @@
     
     --imagem-github: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F9%2F91%2FOcticons-mark-github.svg%2F375px-Octicons-mark-github.svg.png&f=1&nofb=1);
     --imagem-pixelArt: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi0.wp.com%2Fwww.aesdes.org%2Fwp-content%2Fuploads%2F2016%2F01%2Feboy_sf.png%3Fresize%3D1500%2C1062&f=1&nofb=1);
-    --imagem-draw-mode-pencil: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fgame-icons.net%2Ficons%2F000000%2Ftransparent%2F1x1%2Fdelapouite%2Fpencil.png&f=1&nofb=1);
-    --imagem-draw-mode-rubber: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F6%2F65%2FHSRubber.svg%2F480px-HSRubber.svg.png&f=1&nofb=1);
+    --imagem-my-profile: url(https://avatars.githubusercontent.com/u/48099106?v=4);
 }
 
 * {
@@ -50,7 +49,9 @@ header > div{
 
 header #header-image{
     border-radius: 50%;
-    background-color: var(--color-almost-black);
+    background-position: center center;
+    background-size: cover;
+    background-image: var(--imagem-my-profile);
     height: 70px;
     width: 70px;
 }
